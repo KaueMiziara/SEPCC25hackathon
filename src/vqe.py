@@ -38,12 +38,9 @@ def run_vqe(bqm: BinaryQuadraticModel, log: LogVQE):
         cost_func_wrapper,
         init_params,
         method="COBYLA",
-        options={"maxiter": 300, "disp": True},
+        options={"maxiter": 500, "disp": True},
     )
 
     energia_final = res.fun + offset
-
-    print("\nOptimización completada.")
-    print(f"Energía mínima encontrada: {energia_final:.4f}")
 
     return res, log, ansatz, energia_final

@@ -114,7 +114,6 @@ def preparar_problema(
     )
     ansatz = ansatz.decompose()
 
-    print(f"Problema preparado: {hamiltoniano.num_qubits} Qubits.")
     print(f"Parámetros del Ansatz: {ansatz.num_parameters}")
 
     return hamiltoniano, ansatz, offset
